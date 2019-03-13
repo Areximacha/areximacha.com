@@ -3,7 +3,6 @@ module.exports = {
     title: `areximacha.com`,
     description: `Jay Tang - A portfolio`,
     author: `Jay Tang`,
-    sections: [`home`, `profile`, `work`, `contact`],
   },
   plugins: [
     `gatsby-plugin-emotion`,
