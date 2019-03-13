@@ -1,0 +1,7 @@
+node_modules/**
+
+#compiled project folders
+public/
+
+#custom
+jest-preprocess.js
