@@ -6,18 +6,16 @@ import * as styles from './header.style'
 import Navigation from '../navigation/navigation'
 
 const Header = ({ siteTitle }) => (
-  <styles.Container>
+  <styles.HeaderContainer>
     <styles.Column>
       <styles.Logo>
-        <Link to='/' css={styles.linkStyle}>
-          {siteTitle}
-        </Link>
+        <Link to='/'>{siteTitle}</Link>
       </styles.Logo>
     </styles.Column>
-    <styles.Column css={styles.linkStyle}>
+    <styles.Column>
       <Navigation />
     </styles.Column>
-  </styles.Container>
+  </styles.HeaderContainer>
 )
 
 Header.propTypes = {

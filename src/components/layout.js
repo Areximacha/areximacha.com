@@ -1,15 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+
 import styled from '@emotion/styled'
 import { Global } from '@emotion/core'
 
 import Header from './header/header'
-// import './layout.css'
+
 import reset from '../emotion/reset.style'
 import base from '../emotion/base.style'
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
 `
