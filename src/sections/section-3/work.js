@@ -1,11 +1,11 @@
 import React from 'react'
 
-import * as styles from './work.style'
+import workSection from './work.style'
 
 const Work = () => (
-  <styles.workSection>
+  <workSection>
     <h1>work</h1>
-  </styles.workSection>
+  </workSection>
 )
 
 export default Work

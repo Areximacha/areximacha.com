@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 
-export const workSection = styled.section`
+const workSection = styled.section`
   display: flex;
   min-height: 90vh;
 `
+
+export default workSection
