@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 
-import * as styles from './navigation.style'
+import Nav from './navigation.style'
 
 const parseLinks = data =>
   data.allFile.edges.reduce((acc, { node: { name } }) => {
@@ -12,7 +12,7 @@ const parseLinks = data =>
   }, [])
 
 export const PureNavigation = ({ data }) => (
-  <styles.Nav>
+  <Nav>
     <ul>
       {parseLinks(data).map(name => (
         <li key={name}>
@@ -20,7 +20,7 @@ export const PureNavigation = ({ data }) => (
         </li>
       ))}
     </ul>
-  </styles.Nav>
+  </Nav>
 )
 
 PureNavigation.propTypes = {

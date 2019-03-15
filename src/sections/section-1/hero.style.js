@@ -6,13 +6,14 @@ import bgImg from '../../assets/images/hero-bg.jpg'
 
 export const HeroSection = styled.section`
   position: relative;
-  padding: 60px 40px 0;
-  height: 90vh;
+  padding-top: 80px;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 0 200px #000;
   overflow: hidden;
+  background-color: ${colours.colourBackgroundDelta};
 `
 
 export const HeroBackground = styled.div`
@@ -22,9 +23,10 @@ export const HeroBackground = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  height: 150%;
   top: 0;
   left: 0;
+  opacity: 0.4;
 `
 
 export const Neon = styled.div`

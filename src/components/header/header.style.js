@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
+import { colourCopyNeg } from '../../emotion/colours.style'
 
 export const HeaderContainer = styled.header`
   position: absolute;
   width: 100%;
   top: 0;
-  left:0;
+  left: 0;
   display: flex;
-  height: 60px;
+  height: 80px;
   padding: 0 40px;
   z-index: 2;
 `
@@ -17,16 +18,12 @@ export const Column = styled.div`
 
 export const Logo = styled.div`
   text-align: left;
-  padding: 20px 0;
+  padding: 30px 0;
 
   a {
     font-weight: 600;
-    font-size: 20px;
-    opacity: 0.4;
+    font-size: 26px;
     transition: opacity 0.4s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
+    color: ${colourCopyNeg};
   }
 `

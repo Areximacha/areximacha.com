@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 import { Global } from '@emotion/core'
 
 import Header from './header/header'
+import Footer from './footer/footer'
 
 import reset from '../emotion/reset.style'
 import base from '../emotion/base.style'
@@ -33,13 +34,8 @@ const Layout = ({ children }) => (
         <Global styles={base} />
         <Container>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <div>
-            <main>{children}</main>
-            <footer>
-              {`© ${new Date().getFullYear()}, Built with `}
-              <a href='https://www.gatsbyjs.org'>Gatsby</a>
-            </footer>
-          </div>
+          <main>{children}</main>
+          <Footer />
         </Container>
       </>
     )}

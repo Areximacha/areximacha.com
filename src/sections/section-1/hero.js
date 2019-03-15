@@ -3,7 +3,7 @@ import React from 'react'
 import * as styles from './hero.style'
 
 const Hero = () => (
-  <styles.HeroSection>
+  <styles.HeroSection id='hero'>
     <styles.HeroBackground />
     <styles.Neon>
       <h4>JAY</h4>
