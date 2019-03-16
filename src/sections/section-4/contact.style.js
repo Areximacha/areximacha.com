@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 
-export const contactSection = styled.section`
+export const ContactSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ export const contactSection = styled.section`
   padding: 50px 40px;
 `
 
-export const contactColumn = styled.div`
+export const ContactColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -20,7 +20,7 @@ export const contactColumn = styled.div`
   }
 `
 
-export const contactRow = styled.div`
+export const ContactRow = styled.div`
   display: flex;
   justify-content: space-evenly;
 `

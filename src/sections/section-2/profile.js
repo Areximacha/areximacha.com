@@ -4,8 +4,8 @@ import React from 'react'
 import * as styles from './profile.style'
 
 const Profile = () => (
-  <styles.profileSection>
-    <styles.profileContent>
+  <styles.ProfileSection id='profile'>
+    <styles.ProfileContent>
       <h2>Coder. Gamer. Geek.</h2>
       <p>
         <strong>Jay Tang</strong> - A self confessed nerd, obsessed with video
@@ -19,8 +19,8 @@ const Profile = () => (
         I love building things and I am always excited to play with new tech,
         solving problems and leveling up my abilities to become more awesome.
       </p>
-    </styles.profileContent>
-  </styles.profileSection>
+    </styles.ProfileContent>
+  </styles.ProfileSection>
 )
 
 export default Profile

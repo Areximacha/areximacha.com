@@ -11,10 +11,10 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import * as styles from './contact.style'
 
 const Contact = () => (
-  <styles.contactSection>
-    <styles.contactColumn>
+  <styles.ContactSection id='contact'>
+    <styles.ContactColumn>
       <h2>Contact Me</h2>
-      <styles.contactRow>
+      <styles.ContactRow>
         <a
           href='https://www.linkedin.com/in/jay-tang-a6445b93'
           target='_blank'
@@ -70,9 +70,9 @@ const Contact = () => (
             css={styles.contactIcon}
           />
         </a>
-      </styles.contactRow>
-    </styles.contactColumn>
-  </styles.contactSection>
+      </styles.ContactRow>
+    </styles.ContactColumn>
+  </styles.ContactSection>
 )
 
 export default Contact

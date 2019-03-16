@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import Nav from './navigation.style'
 
@@ -11,17 +12,38 @@ const parseLinks = data =>
       : [...acc, name]
   }, [])
 
-export const PureNavigation = ({ data }) => (
-  <Nav>
-    <ul>
-      {parseLinks(data).map(name => (
-        <li key={name}>
-          <a href={`#${name}`}>{name}</a>
-        </li>
-      ))}
-    </ul>
-  </Nav>
-)
+const handleClick = (e, name) => {
+  e.preventDefault()
+  const target = document.getElementById(name)
+
+  if (target) scrollTo(target)
+}
+
+const scrollTo = target => {
+  const targetPos = target.getBoundingClientRect().top
+
+  window.scrollTo({ top: targetPos, behavior: 'smooth' })
+}
+
+export const PureNavigation = ({ data }) => {
+  useEffect(() => {
+    smoothscroll.polyfill()
+  }, [])
+
+  return (
+    <Nav>
+      <ul>
+        {parseLinks(data).map(name => (
+          <li key={name}>
+            <a href={`#${name}`} onClick={e => handleClick(e, name)}>
+              {name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Nav>
+  )
+}
 
 PureNavigation.propTypes = {
   data: PropTypes.object.isRequired,
