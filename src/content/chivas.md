@@ -1,5 +1,9 @@
 ---
 title: 'chivas'
+category: 'work'
+order: 2
 ---
 
-Chivas
+<h3>Chivas - The Venture</h3>
+
+Blah blah blah.
