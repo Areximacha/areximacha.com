@@ -50,14 +50,14 @@ const base = css`
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 65px;
     text-transform: uppercase;
     line-height: 0.9em;
     font-weight: bold;
     color: #333333;
 
     ${mediaQuery.tablet} {
-      font-size: 65px;
+      font-size: 48px;
     }
   }
 
@@ -66,12 +66,21 @@ const base = css`
     margin: 10px 0;
     color: #333333;
     line-height: 0.9;
+
+    ${mediaQuery.tablet} {
+      font-size: 35px;
+      line-height: 1.1;
+    }
   }
 
   h3 {
     font-size: 24px;
     color: #333333;
     line-height: 0.9;
+
+    ${mediaQuery.tablet} {
+      font-size: 20px;
+    }
   }
 
   p {

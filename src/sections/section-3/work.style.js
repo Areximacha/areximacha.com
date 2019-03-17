@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import * as colours from '../../emotion/colours.style'
+import { mediaQuery } from '../../emotion/utils.style'
 
 import dulux from '../../assets/images/logos/dulux.png'
 import pandora from '../../assets/images/logos/pandora.png'
@@ -23,6 +24,11 @@ export const WorkSection = styled.section`
   align-items: center;
   box-shadow: inset 0 0 200px #000;
   background-color: ${colours.colourBackgroundDelta};
+
+  ${mediaQuery.tablet} {
+    min-height: 75vh;
+    padding: 10px;
+  }
 `
 
 export const WorkBackground = styled.div`
@@ -61,12 +67,20 @@ export const WorkBackground = styled.div`
   &.arcadia {
     background-image: url(${arcadiaBg});
   }
+
+  ${mediaQuery.tablet} {
+    background-attachment: initial;
+  }
 `
 
 export const WorkContent = styled.div`
   display: flex;
   width: 1366px;
   z-index: 1;
+
+  ${mediaQuery.tablet} {
+    display: block;
+  }
 `
 
 export const WorkSelector = styled.div`
@@ -77,6 +91,12 @@ export const WorkSelector = styled.div`
 
   h3 {
     padding-bottom: 20px;
+  }
+
+  ${mediaQuery.tablet} {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 `
 
@@ -105,6 +125,15 @@ export const WorkButtons = styled.div`
 
     &:focus {
       outline: none;
+    }
+  }
+  ${mediaQuery.tablet} {
+    justify-content: space-between;
+
+    button {
+      width: 75px;
+      height: 50px;
+      background-size: contain;
     }
   }
 
@@ -146,5 +175,9 @@ export const WorkDescription = styled.div`
 
   h3 {
     color: ${colours.colourCopyNeg};
+  }
+
+  ${mediaQuery.tablet} {
+    padding: 10px;
   }
 `

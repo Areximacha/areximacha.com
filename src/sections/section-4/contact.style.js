@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import { mediaQuery } from '../../emotion/utils.style'
 
 export const ContactSection = styled.section`
   display: flex;
@@ -7,6 +8,11 @@ export const ContactSection = styled.section`
   align-items: center;
   min-height: 50vh;
   padding: 50px 40px;
+
+  ${mediaQuery.tablet} {
+    padding: 50px 0;
+    min-height: unset;
+  }
 `
 
 export const ContactColumn = styled.div`
@@ -17,6 +23,12 @@ export const ContactColumn = styled.div`
 
   h2 {
     margin-bottom: 50px;
+  }
+
+  ${mediaQuery.tablet} {
+    h2 {
+      text-align: center;
+    }
   }
 `
 
@@ -32,5 +44,9 @@ export const contactIcon = css`
 
   &:hover {
     opacity: 1;
+  }
+
+  ${mediaQuery.tablet} {
+    font-size: 30px;
   }
 `

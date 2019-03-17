@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import * as colours from '../../emotion/colours.style'
-import { fontbeon, flicker } from '../../emotion/utils.style'
+import { fontbeon, flicker, mediaQuery } from '../../emotion/utils.style'
 
 import bgImg from '../../assets/images/hero-bg.jpg'
 
@@ -14,6 +14,10 @@ export const HeroSection = styled.section`
   box-shadow: inset 0 0 200px #000;
   overflow: hidden;
   background-color: ${colours.colourBackgroundDelta};
+
+  ${mediaQuery.tablet} {
+    min-height: 50vh;
+  }
 `
 
 export const HeroBackground = styled.div`

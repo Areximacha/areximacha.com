@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { colourCopyNeg } from '../../emotion/colours.style'
+import { mediaQuery } from '../../emotion/utils.style'
 
 export default styled.nav`
   padding: 30px 50px 30px 0;
@@ -24,5 +25,9 @@ export default styled.nav`
         opacity 1;
       }
     }
+  }
+
+  ${mediaQuery.tablet} {
+    padding: 20px;
   }
 `
