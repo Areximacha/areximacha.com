@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import * as styles from './work.style'
 
 const PureWork = ({ data }) => {
-  const [currentProject, setCurrentProject] = useState('dulux')
+  const [currentProject, setCurrentProject] = useState('arcadia')
 
   const renderButtons = nodes =>
     nodes.map(({ node: { frontmatter: { title } } }) => (
@@ -17,15 +17,14 @@ const PureWork = ({ data }) => {
       />
     ))
 
-  const getDescription = nodes => {
-    return nodes.find(
+  const getDescription = nodes =>
+    nodes.find(
       ({
         node: {
           frontmatter: { title },
         },
       }) => title === currentProject
     ).node.html
-  }
 
   return (
     <styles.WorkSection id='work'>

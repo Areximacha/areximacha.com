@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { css } from '@emotion/core'
 
 import * as styles from './hero.style'
 
 const Hero = () => {
   const [scrollPos, setScrollPos] = useState(0)
+  const heroBox = useRef(null)
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
 
@@ -12,7 +14,8 @@ const Hero = () => {
   }, [])
 
   const handleScroll = () => {
-    setScrollPos(window.scrollY / 3)
+    if (heroBox.current.getBoundingClientRect().bottom > 0)
+      setScrollPos(window.scrollY / 3)
   }
 
   const backgroundPos = css`
@@ -20,7 +23,7 @@ const Hero = () => {
   `
 
   return (
-    <styles.HeroSection id='hero'>
+    <styles.HeroSection id='hero' ref={heroBox}>
       <styles.HeroBackground css={backgroundPos} />
       <styles.Neon>
         <h4>JAY</h4>

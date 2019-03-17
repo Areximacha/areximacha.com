@@ -6,18 +6,21 @@ import pandora from '../../assets/images/logos/pandora.png'
 import sainsburys from '../../assets/images/logos/sainsburys.png'
 import seat from '../../assets/images/logos/seat.png'
 import chivas from '../../assets/images/logos/chivas.png'
+import arcadia from '../../assets/images/logos/arcadia.svg'
 
 import duluxBg from '../../assets/images/work-dulux.jpg'
 import pandoraBg from '../../assets/images/work-pandora.jpg'
 import sainsburysBg from '../../assets/images/work-sainsburys.jpg'
 import seatBg from '../../assets/images/work-seat.jpg'
 import chivasBg from '../../assets/images/work-venture.jpg'
+import arcadiaBg from '../../assets/images/work-arcadia.png'
 
 export const WorkSection = styled.section`
   position: relative;
   display: flex;
   min-height: 90vh;
   justify-content: center;
+  align-items: center;
   box-shadow: inset 0 0 200px #000;
   background-color: ${colours.colourBackgroundDelta};
 `
@@ -54,6 +57,10 @@ export const WorkBackground = styled.div`
   &.chivas {
     background-image: url(${chivasBg});
   }
+
+  &.arcadia {
+    background-image: url(${arcadiaBg});
+  }
 `
 
 export const WorkContent = styled.div`
@@ -67,6 +74,10 @@ export const WorkSelector = styled.div`
   background-color: ${colours.colourBackgroundBeta};
   padding: 20px;
   text-align: center;
+
+  h3 {
+    padding-bottom: 20px;
+  }
 `
 
 export const WorkButtons = styled.div`
@@ -76,12 +87,14 @@ export const WorkButtons = styled.div`
 
   button {
     display: inline-block;
+    padding: 0;
     border: none;
     margin: 0 10px;
     height: 100px;
-    width: 104px;
+    width: 158px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent;
     opacity: 0.5;
     transition: opacity 0.4s ease-in-out;
     cursor: pointer;
@@ -113,6 +126,11 @@ export const WorkButtons = styled.div`
 
   .work-seat {
     background-image: url(${seat});
+  }
+
+  .work-arcadia {
+    background-image: url(${arcadia});
+    background-size: contain;
   }
 
   .active {

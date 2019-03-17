@@ -1,7 +1,7 @@
 ---
 title: 'dulux'
 category: 'work'
-order: 1
+order: 2
 ---
 
 <h3>Dulux - Various projects</h3>
