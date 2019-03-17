@@ -7,6 +7,12 @@ import sainsburys from '../../assets/images/logos/sainsburys.png'
 import seat from '../../assets/images/logos/seat.png'
 import chivas from '../../assets/images/logos/chivas.png'
 
+import duluxBg from '../../assets/images/work-dulux.jpg'
+import pandoraBg from '../../assets/images/work-pandora.jpg'
+import sainsburysBg from '../../assets/images/work-sainsburys.jpg'
+import seatBg from '../../assets/images/work-seat.jpg'
+import chivasBg from '../../assets/images/work-venture.jpg'
+
 export const WorkSection = styled.section`
   position: relative;
   display: flex;
@@ -26,7 +32,28 @@ export const WorkBackground = styled.div`
   width: 100%;
   height: 100%;
   background-attachment: fixed;
+  transition: opacity 0.4s ease-in-out;
   opacity: 0.4;
+
+  &.dulux {
+    background-image: url(${duluxBg});
+  }
+
+  &.pandora {
+    background-image: url(${pandoraBg});
+  }
+
+  &.sainsburys {
+    background-image: url(${sainsburysBg});
+  }
+
+  &.seat {
+    background-image: url(${seatBg});
+  }
+
+  &.chivas {
+    background-image: url(${chivasBg});
+  }
 `
 
 export const WorkContent = styled.div`

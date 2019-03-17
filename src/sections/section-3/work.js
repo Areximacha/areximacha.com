@@ -1,18 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { css } from '@emotion/core'
 import { graphql, StaticQuery } from 'gatsby'
 
 import * as styles from './work.style'
-import dulux from '../../assets/images/work-dulux.jpg'
-// import pandora from '../../assets/images/work-pandora.jpg'
-// import sainsburys from '../../assets/images/work-sainsburys.jpg'
-// import seat from '../../assets/images/work-seat.jpg'
-// import chivas from '../../assets/images/work-venture.jpg'
-
-const backgroundImage = css`
-  background-image: url(${dulux});
-`
 
 const PureWork = ({ data }) => {
   const [currentProject, setCurrentProject] = useState('dulux')
@@ -27,9 +17,19 @@ const PureWork = ({ data }) => {
       />
     ))
 
+  const getDescription = nodes => {
+    return nodes.find(
+      ({
+        node: {
+          frontmatter: { title },
+        },
+      }) => title === currentProject
+    ).node.html
+  }
+
   return (
     <styles.WorkSection id='work'>
-      <styles.WorkBackground css={backgroundImage} />
+      <styles.WorkBackground className={`${currentProject}`} />
       <styles.WorkContent>
         <styles.WorkSelector>
           <h3>Selected Projects</h3>
@@ -37,13 +37,12 @@ const PureWork = ({ data }) => {
             {renderButtons(data.allMarkdownRemark.edges)}
           </styles.WorkButtons>
         </styles.WorkSelector>
-        <styles.WorkDescription>
-          <h3>Work Title</h3>
-          <p>
-            A bunch of text about something or other that is about my work for
-            whoever this may be of interest to.
-          </p>
-        </styles.WorkDescription>
+        <styles.WorkDescription
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: getDescription(data.allMarkdownRemark.edges),
+          }}
+        />
       </styles.WorkContent>
     </styles.WorkSection>
   )
