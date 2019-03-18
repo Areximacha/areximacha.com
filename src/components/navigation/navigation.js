@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import smoothscroll from 'smoothscroll-polyfill'
 
-import Nav from './navigation.style'
+import * as styles from './navigation.style'
 
 const parseLinks = data =>
   data.allFile.edges.reduce((acc, { node: { name } }) => {
@@ -12,13 +12,6 @@ const parseLinks = data =>
       : [...acc, name]
   }, [])
 
-const handleClick = (e, name) => {
-  e.preventDefault()
-  const target = document.getElementById(name)
-
-  if (target) scrollTo(target)
-}
-
 const scrollTo = target => {
   const targetPos = target.getBoundingClientRect().top
 
@@ -26,12 +19,27 @@ const scrollTo = target => {
 }
 
 export const PureNavigation = ({ data }) => {
+  const [active, setActive] = useState(false)
   useEffect(() => {
     smoothscroll.polyfill()
   }, [])
 
+  const handleClick = (e, name) => {
+    e.preventDefault()
+    const target = document.getElementById(name)
+
+    if (target) {
+      setActive(false)
+      scrollTo(target)
+    }
+  }
+
+  const openNav = () => {
+    return active ? setActive(false) : setActive(true)
+  }
+
   return (
-    <Nav>
+    <styles.Nav className={active ? 'active' : ''}>
       <ul>
         {parseLinks(data).map(name => (
           <li key={name}>
@@ -41,7 +49,12 @@ export const PureNavigation = ({ data }) => {
           </li>
         ))}
       </ul>
-    </Nav>
+      <styles.NavButton onClick={openNav}>
+        <styles.Burger className='bun-top' />
+        <styles.Burger className='patty' />
+        <styles.Burger className='bun-bottom' />
+      </styles.NavButton>
+    </styles.Nav>
   )
 }
 

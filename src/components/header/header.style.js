@@ -14,6 +14,7 @@ export const HeaderContainer = styled.header`
 
   ${mediaQuery.tablet} {
     padding: 0 20px;
+    height: 60px;
   }
 `
 
