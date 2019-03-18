@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Work/> @render renders correctly 1`] = `
+<section
+  className="css-3t7hvm"
+  id="work"
+>
+  <div
+    className="arcadia css-nokm5q"
+  />
+  <div
+    className="css-bbgkix"
+  >
+    <div
+      className="css-120rkrw"
+    >
+      <h3>
+        Selected Projects
+      </h3>
+      <div
+        className="css-vv7mir"
+      >
+        <button
+          className="work-arcadia active"
+          data-testid="test-arcadia"
+          onClick={[Function]}
+          type="button"
+        />
+        <button
+          className="work-batman"
+          data-testid="test-batman"
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      className="css-nb5ok5"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "test1",
+        }
+      }
+      data-testid="test-description"
+    />
+  </div>
+</section>
+`;

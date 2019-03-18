@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> @render renders correctly 1`] = `
+<footer
+  className="css-t6flet"
+>
+  © 2019 Jay Tang | Powered by
+   
+  <a
+    href="https://www.gatsbyjs.org/"
+    rel=" noreferrer noopener"
+    target="_blank"
+  >
+    GatsbyJS
+  </a>
+</footer>
+`;

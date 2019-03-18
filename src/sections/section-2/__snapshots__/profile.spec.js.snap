@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile/> @render renders correctly 1`] = `
+<section
+  className="css-1itll8f"
+  id="profile"
+>
+  <div
+    className="css-194vaoi"
+  >
+    <h2>
+      Coder. Gamer. Geek.
+    </h2>
+    <p>
+      <strong>
+        Jay Tang
+      </strong>
+       - A self confessed nerd, obsessed with video games and possessor of an encyclopedic knowledge of comic book history.
+    </p>
+    <p>
+      I am a web technologist, currently specialising in front-end engineering with React, Redux, NodeJS and a bunch of other stuff.
+    </p>
+    <p>
+      I love building things and I am always excited to play with new tech, solving problems and leveling up my abilities to become more awesome.
+    </p>
+  </div>
+</section>
+`;

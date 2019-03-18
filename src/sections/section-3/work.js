@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from 'gatsby'
 
 import * as styles from './work.style'
 
-const PureWork = ({ data }) => {
+export const PureWork = ({ data }) => {
   const [currentProject, setCurrentProject] = useState('arcadia')
 
   const renderButtons = nodes =>
@@ -14,6 +14,7 @@ const PureWork = ({ data }) => {
         onClick={() => setCurrentProject(title)}
         key={`${title}`}
         type='button'
+        data-testid={`test-${title}`}
       />
     ))
 
@@ -41,6 +42,7 @@ const PureWork = ({ data }) => {
           dangerouslySetInnerHTML={{
             __html: getDescription(data.allMarkdownRemark.edges),
           }}
+          data-testid='test-description'
         />
       </styles.WorkContent>
     </styles.WorkSection>
