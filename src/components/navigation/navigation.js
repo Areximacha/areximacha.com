@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, navigate } from 'gatsby'
 import smoothscroll from 'smoothscroll-polyfill'
 
 import * as styles from './navigation.style'
@@ -31,6 +31,8 @@ export const PureNavigation = ({ data }) => {
     if (target) {
       setActive(false)
       scrollTo(target)
+    } else {
+      navigate(`/#${name}`)
     }
   }
 

@@ -41,7 +41,7 @@
     "jest": "echo \"Testing...\"; jest",
     "jest:watch": "npm run jest -- --watch -o",
     "jest:updateSnapshots": "npm run jest -- -u",
-    "precommit": "lint-staged && npm run test"
+    "precommit": "lint-staged && npm run jest"
   },
   "lint-staged": {
     "*.js": [
