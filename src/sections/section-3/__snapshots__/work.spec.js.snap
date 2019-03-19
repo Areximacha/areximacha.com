@@ -18,7 +18,7 @@ exports[`<Work/> @render renders correctly 1`] = `
         Selected Projects
       </h3>
       <div
-        className="css-vv7mir"
+        className="css-kc7c0l"
       >
         <button
           className="work-arcadia active"

@@ -111,7 +111,7 @@ export const WorkButtons = styled.div`
     border: none;
     margin: 0 10px;
     height: 100px;
-    width: 158px;
+    width: 150px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;

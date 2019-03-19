@@ -1,13 +1,17 @@
 import { css } from '@emotion/core'
 import { mediaQuery } from './utils.style'
 
+import beoneot from '../assets/fonts/beon-webfont.eot'
+import beonwoff from '../assets/fonts/beon-webfont.woff'
+import beonttf from '../assets/fonts/beon-webfont.ttf'
+import beonsvg from '../assets/fonts/beon-webfont.svg'
+
 const base = css`
   @font-face {
     font-family: 'beon';
-    src: url('../assets/fonts/beon-webfont.eot');
-    src: url('../assets/fonts/beon-webfont.woff') format('woff'),
-      url('../assets/fonts/beon-webfont.ttf') format('truetype'),
-      url('../assets/fonts/beon-webfont.svg#beon-webfont') format('svg');
+    src: url(${beoneot});
+    src: url(${beonwoff}) format('woff'), url(${beonttf}) format('truetype'),
+      url(${beonsvg}) format('svg');
     font-weight: normal;
     font-style: normal;
   }
