@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <styles.HeroSection id='hero' ref={heroBox}>
-      <styles.HeroBackground css={backgroundPos} />
+      <styles.HeroBackground css={backgroundPos} data-testid='hero-bg' />
       <styles.Neon>
         <h4>JAY</h4>
         <h4>TANG</h4>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from 'react-testing-library'
+import { render, fireEvent } from 'react-testing-library'
 import renderer from 'react-test-renderer'
 
 import { PureWork as Work } from './work'
@@ -48,6 +48,16 @@ describe('<Work/>', () => {
 
       expect(queryByTestId('test-description')).toHaveTextContent('test1')
       expect(queryByTestId('test-description')).not.toHaveTextContent('test2')
+    })
+  })
+
+  describe('@events', () => {
+    it('changes the description on work selection', () => {
+      const { getByTestId, queryByTestId } = render(<Work data={data} />)
+
+      fireEvent.click(getByTestId('test-batman'))
+
+      expect(queryByTestId('test-description')).toHaveTextContent('test2')
     })
   })
 })

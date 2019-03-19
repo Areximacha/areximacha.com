@@ -35,7 +35,7 @@ exports[`<Work/> @render renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="css-nb5ok5"
+      className="css-f9b1t7"
       dangerouslySetInnerHTML={
         Object {
           "__html": "test1",

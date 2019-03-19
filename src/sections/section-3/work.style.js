@@ -177,6 +177,10 @@ export const WorkDescription = styled.div`
     color: ${colours.colourCopyNeg};
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   ${mediaQuery.tablet} {
     padding: 10px;
   }

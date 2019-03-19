@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero/> @render renders correctly 1`] = `
+<section
+  className="css-g6bdmo"
+  id="hero"
+>
+  <div
+    className="css-7nheh8"
+    data-testid="hero-bg"
+  />
+  <div
+    className="css-ekjbro"
+  >
+    <h4>
+      JAY
+    </h4>
+    <h4>
+      TANG
+    </h4>
+  </div>
+</section>
+`;

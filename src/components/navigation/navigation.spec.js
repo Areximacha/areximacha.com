@@ -1,8 +1,9 @@
 import React from 'react'
 import { render } from 'react-testing-library'
-// import renderer from 'react-test-renderer'
 
 import { PureNavigation as Navigation } from './navigation'
+
+// const scrollToSpy = jest.fn()
 
 describe('<Navigation/>', () => {
   const data = {
@@ -50,10 +51,17 @@ describe('<Navigation/>', () => {
   })
 
   // describe('@events', () => {
-  //   it('nav item calls scrollTo method on click', () => {
-  //     const { getByText } = render(<Navigation {...initProps} />)
+  //   beforeEach(() => {
+  //     Object.defineProperty(global.window, 'scrollTo', { value: scrollToSpy })
+  //     scrollToSpy.mockClear()
+  //   })
 
-  //     fireEvent.click(getByText('home'))
+  //   it('nav item calls scrollTo method on click', () => {
+  //     const { getByText } = render(<Navigation data={data} />)
+
+  //     fireEvent.click(getByText('batman'))
+
+  //     expect(scrollToSpy).toHaveBeenCalledTimes(1)
   //   })
   // })
 })
