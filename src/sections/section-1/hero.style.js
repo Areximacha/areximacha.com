@@ -31,6 +31,10 @@ export const HeroBackground = styled.div`
   top: 0;
   left: 0;
   opacity: 0.4;
+
+  ${mediaQuery.tablet} {
+    transform: translate3d(0, 0, 0);
+  }
 `
 
 export const Neon = styled.div`

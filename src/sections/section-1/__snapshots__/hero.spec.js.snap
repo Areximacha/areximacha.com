@@ -6,7 +6,7 @@ exports[`<Hero/> @render renders correctly 1`] = `
   id="hero"
 >
   <div
-    className="css-7nheh8"
+    className="css-dhjb12"
     data-testid="hero-bg"
   />
   <div
