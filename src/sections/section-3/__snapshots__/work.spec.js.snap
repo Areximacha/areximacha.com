@@ -2,7 +2,7 @@
 
 exports[`<Work/> @render renders correctly 1`] = `
 <section
-  className="css-3t7hvm"
+  className="css-7qcwkc"
   id="work"
 >
   <div
@@ -12,7 +12,7 @@ exports[`<Work/> @render renders correctly 1`] = `
     className="css-bbgkix"
   >
     <div
-      className="css-120rkrw"
+      className="css-xq4zy8"
     >
       <h3>
         Selected Projects
