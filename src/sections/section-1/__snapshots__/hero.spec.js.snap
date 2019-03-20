@@ -5,9 +5,28 @@ exports[`<Hero/> @render renders correctly 1`] = `
   className="css-g6bdmo"
   id="hero"
 >
-  <div
-    className="css-dhjb12"
-    data-testid="hero-bg"
+  <img
+    alt=""
+    css={
+      Object {
+        "map": undefined,
+        "name": "9xolmb",
+        "next": undefined,
+        "styles": "
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    opacity: 0.4;
+    object-fit: cover;
+    object-fit: center;
+    transform: translate3d(0, -0px, 0);
+  ",
+      }
+    }
+    src="test-file-stub"
   />
   <div
     className="css-ekjbro"
