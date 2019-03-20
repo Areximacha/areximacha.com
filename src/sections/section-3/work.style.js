@@ -27,7 +27,7 @@ export const WorkSection = styled.section`
 
   ${mediaQuery.tablet} {
     min-height: 75vh;
-    padding: 10px;
+    padding: 150px 10px 10px;
   }
 `
 
@@ -97,6 +97,7 @@ export const WorkSelector = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
   }
 `
 
