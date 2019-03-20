@@ -10,7 +10,7 @@ exports[`<Hero/> @render renders correctly 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "9xolmb",
+        "name": "1h5v5td",
         "next": undefined,
         "styles": "
     display: inline-block;
@@ -21,7 +21,7 @@ exports[`<Hero/> @render renders correctly 1`] = `
     height: 150%;
     opacity: 0.4;
     object-fit: cover;
-    object-fit: center;
+    object-position: center;
     transform: translate3d(0, -0px, 0);
   ",
       }

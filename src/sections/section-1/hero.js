@@ -28,7 +28,7 @@ const Hero = () => {
     height: 150%;
     opacity: 0.4;
     object-fit: cover;
-    object-fit: center;
+    object-position: center;
     transform: translate3d(0, -${scrollPos}px, 0);
   `
 
