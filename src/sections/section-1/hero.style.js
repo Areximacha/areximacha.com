@@ -20,6 +20,14 @@ export const HeroSection = styled.section`
   }
 `
 
+export const BackgroundWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+`
+
 export const HeroBackground = styled.div`
   position: absolute;
   background-image: url(${bgImg});
@@ -27,7 +35,7 @@ export const HeroBackground = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 150%;
+  height: 100%;
   top: 0;
   left: 0;
   opacity: 0.4;
