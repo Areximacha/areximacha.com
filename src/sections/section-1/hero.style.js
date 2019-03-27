@@ -25,7 +25,7 @@ export const BackgroundWrapper = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 150%;
+  height: 100%;
 `
 
 export const HeroBackground = styled.div`

@@ -6,7 +6,7 @@ exports[`<Hero/> @render renders correctly 1`] = `
   id="hero"
 >
   <div
-    className="css-98sdv4"
+    className="css-cbyafg"
   >
     <div
       className="css-d50gvv"

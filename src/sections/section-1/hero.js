@@ -19,7 +19,7 @@ const Hero = () => {
   }
 
   const bgTranslation = css`
-    transform: translate3d(0, -${scrollPos}px, 0);
+    transform: translate3d(0, ${scrollPos}px, 0);
   `
 
   return (
